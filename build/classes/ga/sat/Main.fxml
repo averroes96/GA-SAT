@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: #FCF6F5FF;" stylesheets="@custom.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ga.sat.MainController">
+   <children>
+      <Label alignment="CENTER" focusTraversable="false" layoutX="249.0" layoutY="13.0" prefHeight="40.0" prefWidth="200.0" text="SAT-GA-SOLVER" textFill="#89abe3" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Consolas Bold" size="18.0" />
+         </font>
+      </Label>
+      <BorderPane layoutX="55.0" layoutY="448.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
+         <bottom>
+            <JFXButton fx:id="startBtn" buttonType="RAISED" defaultButton="true" focusTraversable="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #7a2048;" text="START" textFill="#fcf6f5" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </bottom>
+         <top>
+            <HBox prefHeight="500.0" prefWidth="680.0" style="-fx-background-color: #eee;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="198.0" prefWidth="335.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" focusTraversable="false" prefHeight="22.0" prefWidth="200.0" text="Benchmarks" textFill="#89abe3">
+                           <font>
+                              <Font name="Consolas Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="benchmarks" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #7a2048;" unFocusColor="#fcf6f5">
+                           <effect>
+                              <DropShadow height="15.0" radius="7.0" width="15.0" />
+                           </effect>
+                        </JFXComboBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="198.0" prefWidth="335.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="335.0">
+                           <children>
+                              <Label alignment="CENTER" focusTraversable="false" prefHeight="22.0" prefWidth="200.0" text="Population size" textFill="#89abe3">
+                                 <font>
+                                    <Font name="Consolas Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" focusTraversable="false" prefHeight="22.0" prefWidth="200.0" text="Max iteration" textFill="#89abe3">
+                                 <font>
+                                    <Font name="Consolas Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="400.0" prefWidth="335.0">
+                           <children>
+                              <JFXSlider fx:id="popSize" orientation="VERTICAL" prefWidth="150.0" />
+                              <JFXSlider fx:id="maxIterations" orientation="VERTICAL" prefHeight="198.0" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="40.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="popLabel" alignment="CENTER" focusTraversable="false" prefHeight="22.0" prefWidth="200.0" textFill="#89abe3">
+                                 <font>
+                                    <Font name="Consolas Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="iterLabel" alignment="CENTER" focusTraversable="false" prefHeight="22.0" prefWidth="200.0" textFill="#89abe3">
+                                 <font>
+                                    <Font name="Consolas Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
