@@ -119,7 +119,7 @@ public class MainController implements Initializable {
                 AnchorPane root = (AnchorPane)loader.load();
                 ResultController rControl = (ResultController)loader.getController();
                 
-                for(int i=0; i< maxIterations.getValue(); i++) {
+                for(int i=0; i< 5; i++) {
                     System.out.println("> " + i);
                     t1 = Instant.now();
                     rControl.addData(clauses, Algorithm.searchGA(clauses, (int)popSize.getValue(), 100, 20, (int)maxIterations.getValue(), 5000),
